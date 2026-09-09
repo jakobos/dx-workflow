@@ -72,10 +72,11 @@ Each entry follows a fixed shape: **Invoke** (who fires it and the arguments), *
 - **Invoke:** user — `/dx-plan [change-id]`
 - **Purpose:** interview and write the solution design, matching standards and priors; owns the `## Progress` section — never skipped, but scales down for trivial work; see [plans and slices](../explanation/plan-and-slices.md).
 - **Reads:** `change.md`, all upstream `research/` (change- and effort-scoped plus `foundation/research/`; `untrusted-content` reference gates any `kind: external` one), `frame.md`, `diagnosis.md`, `brainstorm.md` (its resolved unknowns and rejected scope scale the interview down), `context/standards/`, `foundation/lessons.md`, `foundation/glossary.md`; may `Explore` for prior decisions; always loads the `design-lenses` reference while writing the solution design; loads `plan-data-model`/`plan-api-contracts`/`plan-failure-modes` when the change touches that concern.
-- **Writes:** `context/changes/<change-id>/plan.md` (matched standards, priors, vertical-slice phases, a `## Progress` section with all boxes `[ ]`, and — only when relevant — `## Data model`/`## API & contracts`/`## Failure modes & reversibility`); flips `change.md` to `status: planned`.
+- **Writes:** `context/changes/<change-id>/plan.md` (matched standards, priors, vertical-slice phases, a `## Progress` section with all boxes `[ ]`, and — only when relevant — `## Data model`/`## API & contracts`/`## Failure modes & reversibility`) plus `plan-brief.md` (a human-scannable summary derived from the plan — short sentences, concrete bullets, ASCII phase flows); flips `change.md` to `status: planned`.
 - **Prints next:**
   ```text
   Plan written: context/changes/<change-id>/plan.md
+  Brief:        context/changes/<change-id>/plan-brief.md
   Next: /dx-plan-review <change-id>   — optional pre-implementation gate
     or: /dx-implement <change-id>     (/dx-tdd <change-id> for defect/test-first)
   ```
@@ -291,7 +292,7 @@ See [the knowledge layer](../explanation/knowledge-layer.md) for how standards, 
 ### `dx-references`
 - **Invoke:** internal (`user-invocable: false`) — invoked by other skills as `dx-references <topic>`, **not** a slash command you type.
 - **Purpose:** load a shared reference document by topic so several skills read one canonical copy instead of deep-linking each other's files.
-- **Reads:** `references/<topic>.md` for one of the thirteen topics: `change-md`, `effort-md`, `progress-format`, `plan-template`, `plan-data-model`, `plan-api-contracts`, `plan-failure-modes`, `interview`, `module-design`, `design-lenses`, `knowledge-layer`, `review-report`, `untrusted-content`. (There is no `model-policy` topic.)
+- **Reads:** `references/<topic>.md` for one of the fourteen topics: `change-md`, `effort-md`, `progress-format`, `plan-template`, `plan-brief`, `plan-data-model`, `plan-api-contracts`, `plan-failure-modes`, `interview`, `module-design`, `design-lenses`, `knowledge-layer`, `review-report`, `untrusted-content`. (There is no `model-policy` topic.)
 - **Writes:** nothing — it returns the reference content to the calling skill.
 - **Prints next:** nothing — it has no `Next:` line; control returns to whichever skill invoked it.
 

@@ -61,12 +61,17 @@ the conditional characteristic for `change.md`'s `type`:
 
 Write the `## Progress` section once, all boxes `[ ]`, one `### Phase N` per phase. This is the execution single-source-of-truth `dx-implement`/`dx-tdd` will flip.
 
+## 6 — Write `plan-brief.md` (invoke `dx-references` with `plan-brief`)
+
+Derive a human-scannable summary from the finished `plan.md` and write it beside it as `plan-brief.md`. Follow that reference's shape — short sentences, concrete bullets, ASCII phase flows for complex plans. Scale with the plan: a trivial single-phase plan gets a 5–8 line brief.
+
 ## Done when
 
-`plan.md` exists with matched standards, priors, phases, and Progress; `change.md` is set to `status: planned` and `updated: <today>`. Then print and stop:
+`plan.md` and `plan-brief.md` exist with matched standards, priors, phases, and Progress; `change.md` is set to `status: planned` and `updated: <today>`. Then print and stop:
 
 ```
 Plan written: context/changes/<change-id>/plan.md
+Brief:        context/changes/<change-id>/plan-brief.md
 Next: /dx-plan-review <change-id>   — optional pre-implementation gate
   or: /dx-implement <change-id>     (/dx-tdd <change-id> for defect/test-first)
 ```
