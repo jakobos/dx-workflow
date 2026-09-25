@@ -11,7 +11,7 @@ The **active** glossary discipline: challenge a term, sharpen it, and write it t
 - **Fuzzy** — a vague or overloaded term is in play. Propose one precise canonical term: *"You said 'account' — is that the Customer or the User? Those are different things."*
 - **Resolved** — a term gets nailed down during framing/design/implementation. Capture it immediately, before the moment passes.
 
-**Guard.** Write only `foundation/glossary.md`. If `context/foundation/` doesn't exist, the project isn't scaffolded — say so and suggest `/dx-init`. Create `glossary.md` lazily on the first resolved term.
+**Guard.** Write only `foundation/glossary.md`. If `context/foundation/` doesn't exist (a symlink to `context/` counts — follow it), the project isn't scaffolded — say so and suggest `/dx-init`. Create `glossary.md` lazily on the first resolved term.
 
 ## Sharpen before you write (invoke `dx-references` with `knowledge-layer`)
 

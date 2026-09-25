@@ -9,7 +9,7 @@ argument-hint: [effort-id]
 
 Turn a researched, framed effort into an ordered sequence of **vertical slices** at `context/efforts/<effort-id>/roadmap.md`. Each slice is a tracer bullet — end-to-end and demoable, not a horizontal layer — and maps to exactly one child change. This skill decomposes; it does **not** create the child changes (that is `dx-new`).
 
-**Guard.** Resolve `<effort-id>` under `context/efforts/`. If it is missing, tell the user to run `/dx-new` first. If the path is under `context/archive/`, refuse — an archived effort is done. If `roadmap.md` already exists, show it and ask before overwriting.
+**Guard.** Resolve `<effort-id>` under `context/efforts/` (`context/` may be a symlink — follow it). If it is missing, tell the user to run `/dx-new` first. If the path is under `context/archive/`, refuse — an archived effort is done. If `roadmap.md` already exists, show it and ask before overwriting.
 
 ## 1 — Gather what upstream settled
 

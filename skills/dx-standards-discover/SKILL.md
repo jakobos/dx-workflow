@@ -9,7 +9,7 @@ argument-hint: [--from=PATH]
 
 Mine this project's **actual** conventions — from tooling, recurring code, and existing docs — and write them as prescriptive standard files under `context/standards/`. Record only what the codebase genuinely evidences: no inherited opinions, no aspirational rules. This fills the `frontend/`, `backend/`, `testing/` layers `dx-init` left empty.
 
-**Guard.** `context/standards/{frontend,backend,testing}/` must exist. If it is missing, tell the user to run `/dx-init` first. Never overwrite `global/` — `dx-init` seeded it; only *append* a global file if a genuinely new project-wide rule surfaces that none of the seeds cover. With `--from=PATH`, mine that external codebase instead of the working tree.
+**Guard.** `context/standards/{frontend,backend,testing}/` must exist (a symlink to `context/` counts — follow it). If it is missing, tell the user to run `/dx-init` first. Never overwrite `global/` — `dx-init` seeded it; only *append* a global file if a genuinely new project-wide rule surfaces that none of the seeds cover. With `--from=PATH`, mine that external codebase instead of the working tree.
 
 ## 1 — Read the fixed sources
 Read the config that already encodes rules: linter + formatter configs, `tsconfig`/compiler settings, CI workflows, pre-commit hooks, `package.json`/build scripts, `.editorconfig`. Then read `README`s and any `docs/` that state conventions. These are the strongest evidence — a rule in a linter config is enforced, not wished-for. Read `foundation/glossary.md` for naming (a one-line habit — no section).

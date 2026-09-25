@@ -9,7 +9,7 @@ argument-hint: [change-id]
 
 The post-implementation gate. Compare what was built against `context/changes/<change-id>/plan.md` and **report** — this skill reviews, it never fixes-and-hides the code it is checking. Findings land in a review file and on screen; the user decides what to do.
 
-**Guard.** Resolve `<change-id>` under `context/changes/`. Missing → tell the user to run `/dx-new`. Under `context/archive/` → refuse; an archived change is done. If `plan.md`'s `## Progress` still has a `- [ ]`, the change isn't finished — say so and point at `/dx-implement <change-id>`.
+**Guard.** Resolve `<change-id>` under `context/changes/` (`context/` may be a symlink — follow it). Missing → tell the user to run `/dx-new`. Under `context/archive/` → refuse; an archived change is done. If `plan.md`'s `## Progress` still has a `- [ ]`, the change isn't finished — say so and point at `/dx-implement <change-id>`.
 
 ## 1 — Load
 Read `plan.md` fully (note `change.md`'s `type`), its **Standards to apply** checklist and **Priors & gotchas**, and `foundation/glossary.md` (a one-line habit — review naming against the project's terms; if the diff's naming clashes with the glossary or reveals a term that only just resolved, invoke `dx-domain`). Get the diff scope: `git log`/`git diff` for the commits that landed this change's phases. Then invoke `dx-references` with `knowledge-layer` (how to verify standards compliance), with `review-report` (the finding-ID/`Resolution` schema and file convention shared with `plan-review` and `review-triage`), and — when `type: refactor` — also with `module-design` (depth/seam/deletion vocabulary for the pattern axis).

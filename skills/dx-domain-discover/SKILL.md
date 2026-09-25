@@ -9,7 +9,7 @@ argument-hint: [module or path]
 
 Bootstrap `foundation/glossary.md` from an existing codebase. Mine the code for the **ubiquitous language** already living in it — the terms the domain uses — and write them down so every later skill names things consistently. This is the one-time (per-module) **extraction** pass; `/dx-domain` keeps the glossary sharp during ongoing work. Re-runnable: pass `[module or path]` to scope the sweep to one area and grow the glossary incrementally.
 
-**Guard.** `foundation/glossary.md` must exist (seeded by `/dx-init`) — if it is missing, tell the user to run `/dx-init` first, then stop. Read the current glossary before mining so you extend it, never clobber it.
+**Guard.** `foundation/glossary.md` must exist (seeded by `/dx-init`; `context/` may be a symlink — follow it) — if it is missing, tell the user to run `/dx-init` first, then stop. Read the current glossary before mining so you extend it, never clobber it.
 
 Invoke `dx-references` with `knowledge-layer` for the **glossary entry shape** and the standards/lessons/glossary distinction — this skill writes the glossary and nothing else.
 

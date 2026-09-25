@@ -9,7 +9,7 @@ argument-hint: [idea or question]
 
 Runs **before** `dx-new` on an idea nobody has yet decided is worth building. **Concluding that nothing should be built is a success**, not a run that failed to produce work.
 
-**Guards.** `context/` unscaffolded (`changes/` and `efforts/` absent — empty is normal) → stop, say to run `/dx-init`. No user available to answer → stop; don't invent the appetite and constraints you came here to ask about. And *"this is simple enough to just do it now"* is the red flag, not the shortcut — whether it's simple enough is the conclusion, not the bypass.
+**Guards.** `context/` unscaffolded (`changes/` and `efforts/` absent — empty is normal; a symlink to `context/` counts as scaffolded) → stop, say to run `/dx-init`. No user available to answer → stop; don't invent the appetite and constraints you came here to ask about. And *"this is simple enough to just do it now"* is the red flag, not the shortcut — whether it's simple enough is the conclusion, not the bypass.
 
 ## 1 — Sources before questions
 

@@ -18,6 +18,8 @@ The argument is one id. Find its home:
 - `context/efforts/<id>/` → it's an **effort**.
 - Neither, or both → **fail loud**: print what you looked for and stop. (Already under `context/archive/`? Say it's already archived.)
 
+`context/` may be a symlink (e.g. shared across git worktrees) — follow it.
+
 ## Effort gate — children first
 
 An effort is done only when **every child change is already archived**. Before moving an effort, read its `roadmap.md`, and for each linked child change check for `archived_at` (derive it — scan the child's `change.md`, don't trust a checkbox). If any child is still open, **list them and ask** before continuing. The user may override.

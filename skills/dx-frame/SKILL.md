@@ -9,7 +9,7 @@ argument-hint: [change-id or effort-id]
 
 Settle the **WHAT** before the **HOW**. Run a deep interview on problem framing and alternatives for a change or effort, then write `frame.md` in its folder. The interview is the cure for misalignment — a perfect plan on the wrong problem loses the day. This makes the framing half explicit and skippable, so `dx-plan` can jump straight to solution design.
 
-**Guard.** Resolve `<id>` under `context/changes/` **or** `context/efforts/`. If it is missing, tell the user to run `/dx-new` first. If the path is under `context/archive/`, refuse — an archived container is done.
+**Guard.** Resolve `<id>` under `context/changes/` **or** `context/efforts/` (`context/` may be a symlink — follow it). If it is missing, tell the user to run `/dx-new` first. If the path is under `context/archive/`, refuse — an archived container is done.
 
 ## 1 — Gather settled context
 

@@ -8,7 +8,7 @@ argument-hint: [the finding]
 
 Capture **one** finding so a future change re-reads it instead of relitigating it. A lesson is scar tissue or a load-bearing decision — **a rule, not a story**. Two flavors, both belong here: **cautionary** ("this broke because…") and **decisional** ("we chose X over Y because Z", including a rejected refactor: "don't re-deepen X — it's shallow on purpose because Y"). This is the anteroom to a standard, not an ADR — the framework has no separate decision register.
 
-**Guard.** `foundation/lessons.md` must exist (it does after `/dx-init`). If it is missing, tell the user to run `/dx-init` first. Read `foundation/glossary.md` for naming — a one-line habit, no section.
+**Guard.** `foundation/lessons.md` must exist (it does after `/dx-init`; `context/` may be a symlink — follow it). If it is missing, tell the user to run `/dx-init` first. Read `foundation/glossary.md` for naming — a one-line habit, no section.
 
 ## 1 — Get the finding
 

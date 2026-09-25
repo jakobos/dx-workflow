@@ -8,7 +8,7 @@ argument-hint: [idea or effort/slice]
 
 Every piece of work starts here. Your one job is to pick the **container level**, create its identity file, and print the next command. You do not research, frame, or plan — you route.
 
-**Guard.** If `context/` isn't scaffolded (no `changes/` or `efforts/`), stop and tell the user to run `/dx-init`. Never auto-create the parent tree.
+**Guard.** If `context/` isn't scaffolded (no `changes/` or `efforts/`), stop and tell the user to run `/dx-init`. A symlink to `context/` counts as scaffolded — follow it. Never auto-create the parent tree.
 
 ## Slice of an existing effort — read the id, don't invent one
 

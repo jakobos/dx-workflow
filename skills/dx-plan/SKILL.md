@@ -9,7 +9,7 @@ argument-hint: [change-id]
 
 Turn a change's upstream context into a solution design at `context/changes/<change-id>/plan.md`. The interview is the point: alignment before code. **Never skipped** — `dx-plan` owns `## Progress` — but it scales down to almost nothing for trivial work.
 
-**Guard.** Resolve `<change-id>` under `context/changes/`. If it is missing, tell the user to run `/dx-new` first. If the path is under `context/archive/`, refuse — an archived change is done.
+**Guard.** Resolve `<change-id>` under `context/changes/` (`context/` may be a symlink — follow it). If it is missing, tell the user to run `/dx-new` first. If the path is under `context/archive/`, refuse — an archived change is done.
 
 ## 1 — Gather what upstream already settled
 

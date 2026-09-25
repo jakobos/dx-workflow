@@ -9,7 +9,7 @@ argument-hint: "[change-id] [plan|impl]"
 
 Turn a review report's findings into decisions — and, when you say so, into edits. `dx-plan-review` and `dx-impl-review` only analyze and report; this is the one place that **acts** on a finding, editing `plan.md` or the code it reviewed, one finding at a time, only on your confirmation. That split keeps both review gates pure: a reviewer that never fixes what it checks doesn't need to graduate into a tool-restricted agent.
 
-**Guard.** Resolve `<change-id>` under `context/changes/`. `reviews/` must contain `plan-review.md` or `impl-review.md` — if the directory is missing or empty, point at `/dx-plan-review` or `/dx-impl-review` instead. If the path is under `context/archive/`, refuse: archived work is done.
+**Guard.** Resolve `<change-id>` under `context/changes/` (`context/` may be a symlink — follow it). `reviews/` must contain `plan-review.md` or `impl-review.md` — if the directory is missing or empty, point at `/dx-plan-review` or `/dx-impl-review` instead. If the path is under `context/archive/`, refuse: archived work is done.
 
 ## Load first
 The `review-report` reference (invoke `dx-references` with `review-report`) — the finding-ID/`Resolution` schema, the resume rule, and the file conventions this skill reads and writes.

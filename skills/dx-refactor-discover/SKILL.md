@@ -9,7 +9,7 @@ argument-hint: [area or path]
 
 Start with no concrete target — "find me refactor opportunities." Scan the codebase for **design problems worth fixing** — shallow modules to turn deep, plus whatever the wider design lenses surface — present them **inline as markdown**, and promote whichever the user picks into a normal container. This skill discovers and hands off — it can sketch alternative interfaces for whichever candidates the user picks, but it writes no `plan.md` and edits no code.
 
-**Guard.** If `context/` isn't scaffolded (no `changes/` or `efforts/`), stop and tell the user to run `/dx-init`. The findings this run produces are **ephemeral** — there is no debt register; anything not promoted or recorded as a lesson leaves no trace.
+**Guard.** If `context/` isn't scaffolded (no `changes/` or `efforts/`), stop and tell the user to run `/dx-init`. A symlink to `context/` counts as scaffolded — follow it. The findings this run produces are **ephemeral** — there is no debt register; anything not promoted or recorded as a lesson leaves no trace.
 
 ## 1 — Load the vocabulary
 

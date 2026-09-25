@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 # dx-init
 
-Set up the `context/` tree the dx- workflow reads and writes. **Idempotent by contract:** create what's missing, never touch what exists. Re-running is safe.
+Set up the `context/` tree the dx- workflow reads and writes. **Idempotent by contract:** create what's missing, never touch what exists. Re-running is safe. If `context/` is already a symlink (e.g. shared across git worktrees), treat it as scaffolded — follow it, never replace it with a real directory.
 
 ## Scaffold
 

@@ -9,7 +9,7 @@ argument-hint: [change-id]
 
 An **optional pre-implementation gate**. Where `dx-implement` asks "did we build the plan?", this asks "will this plan actually work?" — a flawed plan costs hours, a flawed review costs minutes. **Report only:** you analyze and recommend, you never edit `plan.md` or the code it describes. Fixes are for the user or `dx-plan` to apply.
 
-**Guard.** Resolve `<change-id>` under `context/changes/`; its `plan.md` must exist — if not, tell the user to run `/dx-plan <change-id>` first. If the path is under `context/archive/`, refuse: an archived change is done.
+**Guard.** Resolve `<change-id>` under `context/changes/` (`context/` may be a symlink — follow it); its `plan.md` must exist — if not, tell the user to run `/dx-plan <change-id>` first. If the path is under `context/archive/`, refuse: an archived change is done.
 
 ## Load first
 - `plan.md` fully, plus the `change.md` (note `type`) and any `research/`, `frame.md`, `diagnosis.md` it draws on.

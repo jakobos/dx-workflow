@@ -8,7 +8,7 @@ argument-hint: [--from=PATH]
 
 Land a rule in the right `context/standards/<layer>/<topic>.md`. Standards are the rulebook — prescriptive, project-wide, stable, and **edited in place** (a catalog, not an append-only log). Read `foundation/glossary.md` for naming (a one-line habit — no section).
 
-**Guard.** `context/standards/` must exist. If it is missing, tell the user to run `/dx-init` first.
+**Guard.** `context/standards/` must exist (a symlink to `context/` counts — follow it). If it is missing, tell the user to run `/dx-init` first.
 
 ## 1 — Get the rule (three entry points)
 

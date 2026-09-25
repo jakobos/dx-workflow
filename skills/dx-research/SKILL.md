@@ -9,7 +9,7 @@ argument-hint: "[container-id topic [--url=…] [--kind=codebase|external]]"
 
 Investigate **one topic** and record it as a durable, provenance-stamped artifact a later `dx-frame`/`dx-plan` can trust without re-deriving. Research is a **deliberate act you initiate** — one invocation, one topic, one mode. Read `foundation/glossary.md` for naming (a one-line habit — no section).
 
-**Guard.** Resolve `<container-id>` first:
+**Guard.** Resolve `<container-id>` first (`context/` may be a symlink — follow it):
 - A change → `context/changes/<id>/`; an effort → `context/efforts/<id>/`; the literal `foundation` → `context/foundation/` (durable, reusable investigations — the natural home for external-doc research read by every plan).
 - Missing container → tell the user to run `/dx-new` first, then stop. Under `context/archive/` → refuse; an archived container is done.
 
